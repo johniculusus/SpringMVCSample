@@ -7,7 +7,12 @@
         http://www.springframework.org/schema/context 
         http://www.springframework.org/schema/context/spring-context-3.0.xsd">
  
+    <!-- Through Request Mapping : See SpringControler.java -->
 	<context:component-scan base-package="jafd.spring.controller" />
+	
+	<!-- Through AbstractController : See HelloWorldController -->
+	<bean name="/welcome.htm" 
+	class="jafd.spring.controller.HelloWorldController" />
  
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
